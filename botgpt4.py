@@ -7,10 +7,8 @@ import discord
 import random
 import time
 from discord.utils import get
-from discord_easy_commands import EasyBot
 intents = discord.Intents.all()
-bot = EasyBot(intents = intents)
-
+bot = discord.Client(intents = intents)
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -21,6 +19,8 @@ async def on_message(message):
     txtlist = txtsplit(respuesta, embeds)
 
     for i in range(0, len(txtlist)):
+        while ("" in txtlist):
+            txtlist.remove("")
         await message.channel.send(txtlist[i])
 
 def main(system, modelo, dtoken, openaitoken):
