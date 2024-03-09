@@ -6,4 +6,4 @@ dtoken = '' # Discord Bot Token
 openaitoken = '' # OpenAI Api Key
 
 
-gpt4.main(system, modelo,dtoken,openaitoken)
+gpt4.main(system,modelo,dtoken,openaitoken)
