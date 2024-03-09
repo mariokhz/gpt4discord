@@ -9,7 +9,7 @@ def emsplit(text):
             if embedcounter%2 == 0:
                 startn = i-2
                 start.append(startn)
-                for j in range(i+1, len(text)-1):
+                for j in range(i+1, len(text)):
                     if (text[j-2] == "`") & (text[j-1] == "`") & (text[j] == "`") :
                         endn = j+1
                         end.append(endn)
